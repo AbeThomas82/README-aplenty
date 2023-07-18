@@ -1,12 +1,21 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-fs.readFile('./Develop/starter.txt', (err,data) => {
+const path = require('path');
+fs.readFile(path.join(__filename, 'starter.txt'), 'utf8', (err,data) => {
     if (err) throw (err);
     console.log(data);
 });
+
+console.log('Hello...');
+
+fs.writeFile(path.join(__filename, 'reply.txt'), 'Nice to meet you.', (err) => {
+    if (err) throw (err);
+    console.log('Write complete.');
+});
+
 const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
-const questions = [
+/* const questions = [
     {
         type: "input",
         name: "title",
@@ -51,4 +60,4 @@ function init() {
 })}
 
 // Function call to initialize app
-init();
+init(); */
