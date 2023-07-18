@@ -1,18 +1,22 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const path = require('path');
-fs.readFile(path.join(__filename, 'starter.txt'), 'utf8', (err,data) => {
+fs.readFile(path.join(__dirname, 'starter.txt'), 'utf8', (err,data) => {
     if (err) throw (err);
     console.log(data);
 });
 
 console.log('Hello...');
 
-fs.writeFile(path.join(__filename, 'reply.txt'), 'Nice to meet you.', (err) => {
+fs.writeFile(path.join(__dirname, 'reply.txt'), 'A new line.', (err) => {
     if (err) throw (err);
     console.log('Write complete.');
 });
 
+fs.appendFile(path.join(__dirname, 'test.txt'), 'A new line.', (err) => {
+    if (err) throw (err);
+    console.log('Append complete.');
+});
 const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 /* const questions = [
