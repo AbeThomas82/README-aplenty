@@ -46,12 +46,19 @@ const questions = [
     {
         type: "input",
         name: "contributing",
-        message: "Please include suggestions on how to improve the project."
+        message: "Please include suggestions the user can interject into the repo."
     },
     {
         type: "input",
         name: "test",
-        message: "Please include test queries."
+        message: "Please include test queries.",
+        default: 'npm test',
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Which license, if any, are you using?",
+        choices:['Apache 2.0','Unilicense','Perl','MIT','IPL 1.0', 'MPL 2.0']
     },
     {
         type: "input",
@@ -66,9 +73,9 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+//function writeToFile(fileName, data) {
     
-}
+//}
 
 // TODO: Create a function to initialize app
 function init() {
