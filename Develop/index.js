@@ -1,25 +1,28 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const path = require('path');
-fs.readFile(path.join(__dirname, 'starter.txt'), 'utf8', (err,data) => {
+/* fs.readFile(path.join(__dirname, 'starter.txt'), 'utf8', (err,data) => {
     if (err) throw (err);
     console.log(data);
 });
 
 console.log('Hello...');
 
-fs.writeFile(path.join(__dirname, 'reply.txt'), 'A new line.', (err) => {
+fs.writeFile(path.join(__dirname, 'reply.txt'), 'Nice to meet you.', (err) => {
     if (err) throw (err);
     console.log('Write complete.');
-});
 
-fs.appendFile(path.join(__dirname, 'test.txt'), 'A new line.', (err) => {
-    if (err) throw (err);
-    console.log('Append complete.');
+    fs.appendFile(path.join(__dirname, 'reply.txt'), '\n\nYes, it is.', (err) => {
+        if (err) throw (err);
+        console.log('Append complete.');
+    });
 });
+ */
+
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
-/* const questions = [
+const questions = [
     {
         type: "input",
         name: "title",
@@ -50,6 +53,16 @@ const inquirer = require('inquirer');
         name: "test",
         message: "Please include test queries."
     },
+    {
+        type: "input",
+        name: "username",
+        message: "What is your GitHub username?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter your email address."
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -61,7 +74,11 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(function (answers){
     console.log(answers);
+    console.log(generateMarkdown(answers));
+    fs.writeFile('README.md',generateMarkdown(answers),(err,data)=>{
+        err? console.error(err):console.log('README successfully generated.')
+    })
 })}
 
 // Function call to initialize app
-init(); */
+init();
