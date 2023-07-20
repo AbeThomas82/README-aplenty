@@ -1,27 +1,7 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
-const path = require('path');
-/* fs.readFile(path.join(__dirname, 'starter.txt'), 'utf8', (err,data) => {
-    if (err) throw (err);
-    console.log(data);
-});
-
-console.log('Hello...');
-
-fs.writeFile(path.join(__dirname, 'reply.txt'), 'Nice to meet you.', (err) => {
-    if (err) throw (err);
-    console.log('Write complete.');
-
-    fs.appendFile(path.join(__dirname, 'reply.txt'), '\n\nYes, it is.', (err) => {
-        if (err) throw (err);
-        console.log('Append complete.');
-    });
-});
- */
-
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-// TODO: Create an array of questions for user input
+
 const questions = [
     {
         type: "input",
@@ -72,12 +52,6 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {
-    
-//}
-
-// TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (answers){
     console.log(answers);
@@ -87,5 +61,4 @@ function init() {
     })
 })}
 
-// Function call to initialize app
 init();
