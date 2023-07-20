@@ -1,22 +1,23 @@
+//This given function accesses badges from the Shields.io site
 function renderLicenseBadge(license) {
    if (license !== 'None'){
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
    }
-   return null;
+   return '';//Returns no value in case there is no license
 }
-
+//This given function links you to the license section
 function renderLicenseLink(license) {
   if (license !== 'None'){
-    return `[License Link Provided Here](#license)`;
+    return `\n[License Link Provided Here](#license)\n`;
    }
-   return null;
+   return '';//Returns no value in case there is no license
 }
 
 function renderLicenseSection(license) {
   if (license !== 'None'){
-    return `## License\nThis project is licensed under the ${license} license.\n`;
+    return `## License\nThis project uses the ${license} license.\n`;
    }
-   return null;
+   return '';//Returns no value in case there is no license
 }
 
 function generateMarkdown(data) {
@@ -35,6 +36,7 @@ function generateMarkdown(data) {
   ${data.usage}\n
   ${renderLicenseSection(data.license)}\n
   ${renderLicenseLink(data.license)}\n
+  [ScreenCastify Link](https://drive.google.com/file/d/1KXj2s56mgfsmS7p6gSUYnPx1pyJPDsZp/view)\n
   ## Contributing
   ${data.contributing}\n
   ## Tests

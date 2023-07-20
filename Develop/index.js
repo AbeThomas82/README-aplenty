@@ -38,7 +38,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Which license, if any, are you using?",
-        choices:['Apache 2.0','Unilicense','Perl','MIT','IPL 1.0', 'MPL 2.0']
+        choices:['None','Apache 2.0','Unilicense','Perl','MIT','IPL 1.0', 'MPL 2.0']
     },
     {
         type: "input",
