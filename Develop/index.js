@@ -38,7 +38,7 @@ const questions = [//Listed question bank like in Challenge 4
         type: "list",
         name: "license",
         message: "Which license, if any, are you using?",
-        choices:['None','Apache 2.0','Unilicense','Perl','MIT','IPL 1.0', 'MPL 2.0']
+        choices:['None','APACHE--2.0','Unilicense','Perl','MIT','IPL--1.0', 'MPL--2.0']
     },//List and choices provided pathway options for the user
     {
         type: "input",

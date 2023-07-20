@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
 //This given function links you to the license section
 function renderLicenseLink(license) {
   if (license !== 'None'){
-    return `\n[License Link](#license)\n`;
+    return `\n*[License Link](#license)\n`;
    }
    return '';//Returns no value in case there is no license
 }
@@ -50,9 +50,6 @@ function generateMarkdown(data) {//Populates info from user input and creates li
   Bootcamp TA's/Instructors: Spencer Sokol, Katherine Hopkins\n
   Paul Cox and Lee Stevens, cohorts\n
   [Node JS Tutorial](https://youtu.be/w-7RQ46RgxU)
-
-
-
 `;
 }
 
