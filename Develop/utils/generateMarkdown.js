@@ -36,7 +36,7 @@ function generateMarkdown(data) {//Populates info from user input and creates li
   ${data.usage}\n
   ${renderLicenseSection(data.license)}\n
   ${renderLicenseLink(data.license)}\n
-  [ScreenCastify Link](https://drive.google.com/file/d/1KXj2s56mgfsmS7p6gSUYnPx1pyJPDsZp/view)\n
+  [ScreenCastify Link](https://drive.google.com/file/d/1UqB_ICGF7Aj8pRIbtakrZG91jQStxL3p/view)\n
   ## Contributing
   ${data.contributing}\n
   ## Tests
@@ -44,7 +44,13 @@ function generateMarkdown(data) {//Populates info from user input and creates li
   ## Questions
   If you have further questions, please contact me:\n
   GitHub: https://github.com/${data.username}\n
-  Email: ${data.email}
+  Email: ${data.email}\n
+  ## Credits
+  AskBCS Tutors\n
+  Bootcamp TA's/Instructors: Spencer Sokol, Katherine Hopkins\n
+  Paul Cox and Lee Stevens, cohorts\n
+  [Node JS Tutorial](https://youtu.be/w-7RQ46RgxU)
+
 
 
 `;
