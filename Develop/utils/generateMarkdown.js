@@ -20,7 +20,7 @@ function renderLicenseSection(license) {
    return '';//Returns no value in case there is no license
 }
 
-function generateMarkdown(data) {
+function generateMarkdown(data) {//Populates info from user input and creates license badges if used 
   return `# ${data.title}\n
   ${renderLicenseBadge(data.license)}
   ## Description
@@ -50,4 +50,4 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown;//Provides whole file to index.js if imported
