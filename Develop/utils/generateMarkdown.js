@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
 //This given function links you to the license section
 function renderLicenseLink(license) {
   if (license !== 'None'){
-    return `\n*[License Link](#license)\n`;
+    return `\n[License Link](#license)\n`;
    }
    return '';//Returns no value in case there is no license
 }
